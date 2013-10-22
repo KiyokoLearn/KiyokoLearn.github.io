@@ -1,0 +1,297 @@
+<!doctype html>
+
+<html>
+
+<head>
+        <style type="text/css">
+        body {
+                background-image:url(Japanese.jpg);
+                background-size:cover;
+                color:white;
+        }
+		h2 {
+			text-indent:15px;
+			border-bottom:3px dashed gray
+		}
+        a.class:link {color:white;}
+        a.class:hover {font-weight:bold;}
+        a.class:active {background-color:gray;}
+        a.class:visited {color:black;}
+        a:link {color:white;}
+        a:hover {font-weight:bold;}
+        a:active {background-color:gray;}
+        a:visited {color:#A9A9A9;}
+        </style>
+</head>
+
+
+<body>
+
+<br />
+<h1 style="text-align:center;">Welcome to Kiyoko Learn!</h1>
+<h5 style="text-align:center;">"Who needs college when you have Kiyoko Learn?"</h5>
+<br />
+<br />
+
+<table width="100%" stlye="text-align:center;" style="background-color:gray;" cellpadding="10">
+        <tr>
+                <th><a href="Home.html">Home</a></th>
+                <th><a href="AboutKiyokoLearn.html">About Kiyoko Learn</a></th>
+                <th><a href="SubjectLessons.html">Subjest/Lessons</a></th>
+                <th><a href="Resources.html">Resources</a></th>
+        </tr>
+</table>
+
+<br />
+
+<h2>Lesson 1 -- Moving Around</h2>
+
+<!-- Start off with what a shell is and how Bash fits into that -->
+
+If you are not using linux, you will not be able to learn Bash Commands and Bash Scripts.
+If you would still like to learn Bash, you can install Virtual Box.
+If you are unsure how to do that, you can visit the tutorial under the Resources Page 
+<a href=" ">here</a>.
+
+<!-- Need to make the above link -->
+
+To begin using command line, you must first open up the terminal. 
+If you are unsure how to do that, you can visit the tutorial under the Resources Page
+<a href=" ">here</a>. 
+
+<!--Need to make the above link -->
+
+<br />
+<br />
+
+Technical terms you should know before you begin:
+	<table border="1" cellpadding="10">
+		<tr>
+			<td><strong><em>Technical Term</em></strong></td>
+			<td><strong><em>Translation</em></strong></td>
+		</tr>
+		<tr>
+			<td>Directory</td>
+			<td>Folder</td>
+		</tr>
+		<tr>
+			<td>GUI (Graphical User Interface)</td>
+			<td>Everything that is interactable on the screen. The icons pictures of folder, files, etc.</td>
+		</tr>
+		<tr>
+			<td>Working Directory</td>
+			<td>The folder you are currently in</td>
+		</tr>
+		<tr>
+			<td>Pathname</td>
+			<td>The directions take to get to a certain directory from the systems starting point.</td>
+		</tr>
+	</table>
+
+<br />
+<br />
+
+Once you are in the terminal, you will see the prompt, which looks something like this:
+<br />
+<strong>Username@ComputerName:~$</strong>
+<br />
+<br />
+<br />
+Right now, you are in your Username directory. 
+When using a GUI, you would see a little window, 
+typically with a bunch of pictures of folders labeled desktop, documents, pictures, etc.
+So, if I'm in the home directory, why don't I see all those folders?
+If you type in "ls" (which stands for list), it will print on the screen everything that is in that directory.
+
+<br />
+<br />
+
+<!-- Insert picture of terminal -->
+<!-- Insert picture of folder when you are in "home" -->
+
+After the command prompt, simply type ls:<br />
+<strong>Username@ComputerName:~$ ls</strong>
+
+<br />
+<br />
+<br />
+
+Then press enter. It should look something like this:<br /><br />
+<strong>
+backup &nbsp&nbsp&nbsp&nbsp&nbsp
+documents &nbsp&nbsp&nbsp&nbsp&nbsp
+images &nbsp&nbsp&nbsp&nbsp&nbsp
+videos &nbsp&nbsp&nbsp&nbsp&nbsp <br />
+bin &nbsp&nbsp&nbsp&nbsp&nbsp
+documents &nbsp&nbsp&nbsp&nbsp&nbsp
+templates &nbsp&nbsp&nbsp&nbsp&nbsp
+downloads &nbsp&nbsp&nbsp&nbsp&nbsp <br />
+music &nbsp&nbsp&nbsp&nbsp&nbsp
+tmp &nbsp&nbsp&nbsp&nbsp&nbsp
+</strong>
+
+<br />
+<br />
+<br />
+
+It is ok, if you have more or less folders than the ones I listed above.
+
+<br />
+<br />
+
+But what if I want to go into one of those folders? 
+When using a normal GUI, you would simply double click on the folder
+(or single click depending on your settings). 
+In the termainal, you have to use the command "cd" (change directory).
+You would type "cd" and then the name of the folder you want to go into.
+
+<br />
+<br />
+
+For example, to go into the documents folder type:<br />
+<strong>Username@ComputerName:~$ cd documents/</strong>  
+
+<br />
+<br />
+<br />
+
+When you press enter, your prompt will change to:</br >
+<strong>Username@ComputerName:~/documents$</strong>
+
+<br />
+<br />
+<br />
+
+The change in the prompt shows that we are now in the documents directory.
+If we want to see what we have in this folder, you can use the ls command again.</br >
+<strong>Username@ComputerName:~/documents$ ls</strong>
+
+<br />
+<br />
+<br />
+
+In my documents folder, I have files and folders, most of which are school related. <br />
+<strong>
+Essay.txt &nbsp&nbsp&nbsp&nbsp&nbsp
+Kiyoko_Learn &nbsp&nbsp&nbsp&nbsp&nbsp
+Me.jpg &nbsp&nbsp&nbsp&nbsp&nbsp
+</strong>
+
+<br />
+<br />
+<br />
+
+Depending on your settings, these may be color coded. 
+On my particular terminal, the image (Me.jpg) is purple, 
+the folder (Kiyoko Learn) is blue,
+and the text file (Essay.txt) is white.
+
+<br />
+<br />
+
+Now, what if I don't want to be in the documents folder anymore?
+What if I want to go back to the home folder?
+What if I want to hit the "back botton" per say?
+To do this, use the "cd .." command. 
+Literally this means change the working directory to the one above the current directory.
+
+<br />
+<br />
+
+For example, if I use type in the "cd .." command:<br />
+<strong>Username@ComputerName:~/documents$ cd ..</strong>
+
+<br />
+<br />
+<br />
+
+When I press enter, my promt changes back to:<br />
+<strong>Username@ComputerName:~$</strong>
+
+<br />
+<br />
+<br />
+
+Now I've been changing directories a lot and I've gotten really far from my Username directory.
+I don't feel like typing "cd .." over and over again until I get back to where I started.
+Is there a shortcut for this? Of course there is! use the command "cd ~". The ~ stands for your Username. <br />
+<strong>Username@ComputerName:~/Folder1/Folder2/Folder3$ cd ~</strong>
+
+<br />
+<br />
+<br />
+
+So, I like the directories I have and all, but what if I want to make a new one?
+The command "mkdir" stands for make directory. 
+You would type "mkdir" and then the name of the directory.
+
+<br />
+<br />
+
+For example, if I wanted to make a new directory called Practice:<br />
+<strong>Username@ComputerName:~$ mkdir Practice</strong>
+
+<br />
+<br />
+
+When you press enter, your prompt will simply appear again
+and I'm sure your first response will be, "What just happened? Was my directory made or not?"
+Rest assured, there is nothing to fear. If you type in "ls" again, your directory should be there.
+
+<br />
+<br />
+
+<strong>
+Username@ComputerName:~$ ls<br />
+Essay.txt &nbsp&nbsp&nbsp&nbsp&nbsp
+Kiyoko_Learn &nbsp&nbsp&nbsp&nbsp&nbsp
+Me.jpg &nbsp&nbsp&nbsp&nbsp&nbsp
+Practice &nbsp&nbsp&nbsp&nbsp&nbsp
+</strong>
+
+<br />
+<br />
+<br />
+
+So I've been moving around directories a lot, and now I'm really confused where I am.
+If you look at the prompt, that should give you and idea of where you are.
+But what if I want to know the full pathname?
+Use the "pwd" command which stands for print working directory.
+
+For example, if I am in the new folder Practice that we just created and I wanted to see the full pathname:
+<strong>
+Username@ComputerName:~/Practice$ pwd<br />
+/home/Username/Practice
+</strong>
+
+<br />
+<br />
+<br />
+
+Other details you don't care for:
+<table border="1" cellpadding="10">
+	<tr>
+		<td><strong>$ ls -a</strong></td>
+		<td>"List all" - View hidden files. Hidden files will be denoted with a . before them</td>
+	</tr>
+	<tr>
+		<td><strong>$ ls -l</strong></td>
+		<td>"Long list" - Lists name of file, when it was last modified, and its size in bytes.</td>
+	</tr>
+</table>
+
+
+<!-- Include picture showing the color coding -->
+
+<p align="center"><a href="CS_Bash_Lesson1.html"><-- Previous Lesson</a> 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="BashCommandsAndBashScript.html">Lessons List</a>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="CS_Bash_Lesson3.html">Next Lesson --></a></p>
+</p>
+
+</body>
+
+
+</html>
+
