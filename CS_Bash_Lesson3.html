@@ -21,6 +21,7 @@
         a:hover {font-weight:bold;}
         a:active {background-color:gray;}
         a:visited {color:#A9A9A9;}
+		div {left:20px;}
         </style>
 </head>
 
@@ -46,6 +47,187 @@
 
 <h2>Lesson 3 -- Files</h2>
 
+<em>
+Note:<br />
+In the previous tutorial, 
+when showing what commands to type into the terminal,
+I wrote out </em><strong>Username@ComputerName~$</strong><em> 
+but I get tired fo typing that whole thing out over and over again.
+From now on when I am showing you commands to type in, I will simply use $.
+I am doing this because the prompt changes depending on what directory you are in, etc.
+Just know that when I use $, I am implying that there is a prompt before the $.
+</em>
+
+<br />
+<br />
+<br />
+
+<h3>Echo</h3>
+<table width="90%" align="center"><tr><td>
+The previous tutorial was about just navigating through files, 
+but what if I want to interact with the shell more?
+Well, the first command we'll talk about is echo. 
+The echo command basically tells the shell to "echo" back whatever you tell it to.
+
+<br />
+<br />
+
+For example, if I want the computer to say to me "Hello World":<br />
+<div><strong>$ echo "Hello World"</strong><div/>
+
+<br />
+<br />
+<br />
+
+Then press enter and it will spit out:<br />
+<div><strong>Hello World</strong></div>
+</td></tr></table>
+
+<br />
+<br />
+<br />
+
+<h3>More Than One Command</h3>
+<table width="90%" align="center"><tr><td>
+What if we want the shell to do multiple things at once,
+instead of us having to type in each individual command and hit enter?
+You can use the ";" to separate commands.
+
+For example, I want to the computer to spit out "Hello World" and "Hello Kiyoko":<br />
+<div><strong>$ echo "Hello World";echo "Hello Kiyoko"</strong></div>
+
+<br />
+<br />
+<br />
+
+When you press enter, the terminal prints out:
+<div><strong>Hello World<br />HelloKiyoko</strong></div>
+</td></tr></table>
+
+<br />
+<br />
+<br />
+
+<h3>New Line with Echo</h3>
+<table width="90%" align="center"><tr><td>
+But what if I'm the perfectionist who doesn't want "Hello World" and "Hello Kiyoko" on two different lines?
+What if I want them on the same line? To do this, we would use -n with echo.
+The -n is telling Bash to not use a new line after that command
+
+<br />
+<br />
+
+For Example:<br />
+<div><strong>$ echo -n "Hello World";echo "Hello Kiyoko:</strong></div>
+
+<br />
+<br />
+<br />
+
+When you press enter:<br />
+<div><strong>Hello WorldHello Kiyoko</strong></div>
+</td></tr></table>
+
+<br />
+<br />
+<br />
+
+<h3>Saving to a File</h3>
+<table width="90%" align="center"><tr><td>
+So, you can now print to the screen. That's cool.
+But let's say my laptop just died.
+When I open the terminal again, everything I printed to the screen is gone!
+Does that mean everything I printed to the screen earlier is gone?
+Do I have to retype EVERYTHING?!
+
+Well, there are two fixes for this.
+The first is that by using the up arrow, you can recall previously entered commands.
+The second is that, when using the echo command, instead of having it print to the screen,
+you can have it save to a file. To do this, you will use >> but we will come back to this.
+However, I first want to mention that you can create a file using the touch command. <br />
+<div><strong>$ touch filename1</strong></div>
+
+<br />
+<br />
+<br />
+
+now, if you were to type in ls, the file filename1 would be listed, even though the file is empty
+But I don't want that file to be empty. As mentioned before, I'm going to use the echo command with >><br />
+<div><strong>$ echo "Hello World" >> filename1</strong></div>
+
+<br />
+<br />
+<br />
+
+This is telling Bash to take the input and instead of outputting the result to the screen,
+output the info to a file.
+
+<br />
+<br />
+
+But what if I forgot to use the touch command first! what if I typed in:
+<div><strong>$ echo "Hello World" >> filename2</strong></div>
+
+<br />
+<br />
+<br />
+
+Don't freak out. If filename2 didn't already exist when you executed that command,
+It simply creates the file filename2.
+</td></tr></table>
+
+<br />
+<br />
+<br />
+
+<h3>Removing Files</h3>
+<table width="90%" align="center"><tr><td>
+But, but, but.... what if I created a file and didn't mean to? How do I get rid of it?
+You can remove files using the rm command.<br />
+<div><strong>$ rm filename2</strong></div>
+
+<br />
+<br />
+<br />
+
+Keep in mind that, unlike other systems, 
+Bash does not prompt you to make sure you really want to delete that file.
+Once you delete that file, its gone for good. 
+Also know that rm is only for deleting files.
+It does not work for directories.
+
+</td></tr></table>
+
+<br />
+<br />
+<br />
+
+<h2>Practice</h2>
+<ol>
+	<li>
+		Print to the screen: <br />
+		<strong>"Hello World, my name is Kiyoko." </br >
+		"What is your name?"</strong> </br >
+		Using the following segments:
+		<ul>
+			<li>"Hello World, "</li>
+			<li>"my name is "</li>
+			<li>"Kiyoko."</li>
+			<li>"What is "</li>
+			<li>"your name?"</li>
+		</ul>
+	</li>
+</ol>
+
+<br />
+<br />
+
+<h2>Practice Answers</h2>
+<ol>
+	<li>echo -n "Hello World, "; echo -n "my name is "; echo "Kiyoko."; echo -n "What is "; echo "your name?"</li>
+</ol>
+
+<br />
 <br />
 
 <p align="center"><a href="CS_Bash_Lesson2.html"><-- Previous Lesson</a> 
